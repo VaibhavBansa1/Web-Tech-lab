@@ -19,7 +19,11 @@ $question_and_file = [
 
     'Write a code for html webpage which displays some background color and text of red colour.' => '22017C04069_9.php',
 
-    'Write a CSS file and attached to any 3 html webpage.' => ['Page 1st' => '22017C04069_10.php?q=1', 'Page 2nd' => '22017C04069_10.php?q=2', 'Page 3rd' => '22017C04069_10.php?q=3'],
+    'Write a CSS file and attached to any 3 html webpage.' => [
+        'Page 1st' => '22017C04069_10.php?q=1',
+        'Page 2nd' => '22017C04069_10.php?q=2',
+        'Page 3rd' => '22017C04069_10.php?q=3',
+    ],
 
     'Write a code for html webpage which displays Virat Kohli image as background.' => '22017C04069_11.php',
 
@@ -111,7 +115,10 @@ $question_and_file = [
 
     'Write a program to align image filling include in CSS?' => '22017C04069_52.php',
 
-    'Write a program to set the colour, align list in CSS?' => '22017C04069_53.php',
+    'Write a program to set the colour, align list in CSS?' => [
+        'Part 1st:-' => '22017C04069_53.php?q=1',
+        'Part 2nd:-' => '22017C04069_53.php?q=2',
+    ],
 
     'Write a program to do text decoration in CSS?' => '22017C04069_54.php',
 
@@ -129,7 +136,9 @@ $question_and_file = [
 
     'Write a program to make CSS buttons?' => '22017C04069_61.php',
 
+    'Make a calculator using HTML, CSS and JavaScript' => '22017C04069_62.php',
 
+    'Copy of google home page' => '22017C04069_63.php',
 ];
 // print_r($question_and_file);
 ?>
@@ -140,13 +149,28 @@ $question_and_file = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Of Practical</title>
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png" type="image/x-icon">
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png" type="image/x-icon">
+    <!-- <link rel="apple-touch-icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    <style>
+        #index-table {
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+        }
 
+        @media only screen and (min-width: 600px) {
+            h3.showOnMobile {
+                display: none;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -159,129 +183,145 @@ $question_and_file = [
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe src="" width="100%" height="100%" frameborder="1" style="border:1px solid black;" id="preview-frame"></iframe>
+                    <iframe src="" width="100%" height="100%" frameborder="1" style="border:1px solid black;"
+                        id="preview-frame"></iframe>
                 </div>
                 <div class="modal-footer bg-success-subtle">
+                    <a href="" id="new-tab-opener" target="_blank" class="btn btn-secondary">Open in new tab</a>
                     <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mt-4">
+    <div class="container-fluid mt-4">
 
         <h1 class="pb-1 mb-4 text-black border-bottom border-4 border-secondary">List Of Practical</h1>
-        <table class="border border-3 border-dark table table-striped-columns table-hover" id="index-table">
+        <div class="table-responsive">
+            <table class="border border-3 border-dark table table-striped-columns table-hover" id="index-table">
 
-            <thead class="table-info">
-                <tr>
-                    <th> S.No. </th>
-                    <th> Question </th>
-                    <th colspan="2"> Action </th>
-                </tr>
-                <!-- <th> Action </th> -->
-                <!-- <th></th> -->
-                <tr style="display: none;">
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
+                <thead class="table-info">
+                    <tr>
+                        <th> S.No. </th>
+                        <th> Question </th>
+                        <th colspan="2"> Action </th>
+                    </tr>
+                    <!-- <th> Action </th> -->
+                    <!-- <th></th> -->
+                    <tr style="display: none;">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
 
-            </thead>
-            <tbody class="table-striped-columns">
+                </thead>
+                <tbody class="table-striped-columns">
 
-                <?php
-                $i = 0;
-                foreach ($question_and_file as $ques => $page) {
+                    <?php
+                    $i = 0;
+                    foreach ($question_and_file as $ques => $page) {
 
-                    if (gettype($page) == 'string') {
-                        ?>
-                        <tr>
-                            <td>
-                                <?php echo ++$i . "."; ?>
-                            </td>
-                            <td>
-                                <?php echo htmlspecialchars($ques); ?>
-                            </td>
-                            <td>
-                                <a href="./<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark">
-                                    Open
-                                </a>
-                            </td>
-                            <td>
-                                <button type="button" class="which-page-preview btn btn-outline-success"
-                                    value="<?php echo $page; ?>" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Preview</button>
-                            </td>
-                        </tr>
+                        if (gettype($page) == 'string') {
+                            ?>
+                                    <tr>
+                                        <th>
+                                            <?php echo ++$i . "."; ?>
+                                        </th>
+                                        <td>
+                                            <?php echo htmlspecialchars($ques); ?>
+                                        </td>
+                                        <td>
+                                            <a href="./<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
+                                                class="btn btn-outline-dark">
+                                                Open
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="which-page-preview btn btn-outline-success"
+                                                value="<?php echo $page; ?>" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModalFullscreen">Preview</button>
+                                        </td>
+                                    </tr>
 
-                        <?php
-                    } else if (is_array($page)) {
+                                    <?php
+                        } else if (is_array($page)) {
 
-                        $link = "";
-                        $btn = "";
-                        $ques_in_part = htmlspecialchars($ques);
-                        foreach ($page as $for_what => $what_page) {
+                            $link = "";
+                            $btn = "";
+                            $ques_in_part = htmlspecialchars($ques);
+                            foreach ($page as $for_what => $what_page) {
 
-                            $ques_in_part .= "<br>\n<br>" . $for_what;
-                            $link .= "<a href='./$what_page' target='_blank' rel='noopener noreferrer'
-                                    class='btn btn-outline-dark mt-3'>
-                                    Open
-                                </a>
-                                <br>";
-                            $btn .= "<button type='button' class='which-page-preview btn btn-outline-success mt-3' value='$what_page' data-bs-toggle='modal' data-bs-target='#exampleModalFullscreen'>Preview</button>
-                                <br>";
+                                $ques_in_part .= "<br>\n<br>" . $for_what;
+                                $link .= "<a href='./$what_page' target='_blank' rel='noopener noreferrer'
+                                        class='btn btn-outline-dark mt-3'>
+                                        Open
+                                    </a>
+                                    <br>";
+                                $btn .= "<button type='button' class='which-page-preview btn btn-outline-success mt-3' value='$what_page' data-bs-toggle='modal' data-bs-target='#exampleModalFullscreen'>Preview</button>
+                                    <br>";
+                            }
+                            ?>
+                                            <tr>
+                                                <th>
+                                            <?php echo ++$i . "."; ?>
+                                                </th>
+                                                <td>
+                                            <?php echo $ques_in_part; ?>
+                                                </td>
+                                                <td>
+                                            <?php echo $link; ?>
+                                                </td>
+                                                <td>
+                                            <?php echo $btn; ?>
+                                                </td>
+                                            </tr>
+                                    <?php
+                        } else {
+                            echo "error";
                         }
-                        ?>
-                            <tr>
-                                <td>
-                                <?php echo ++$i . "."; ?>
-                                </td>
-                                <td>
-                                <?php echo $ques_in_part; ?>
-                                </td>
-                                <td>
-                                <?php echo $link; ?>
-                                </td>
-                                <td>
-                                <?php echo $btn; ?>
-                                </td>
-                            </tr>
-                        <?php
-                    } else {
-                        echo "error";
                     }
-                }
-                ?>
-            </tbody>
-        </table>
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-    <!-- <script src="//cdn.datatables.net/2.0.5/js/dataTables.min.js"></script> -->
+    <!-- <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script> -->
 
     <script>
         const previewBtn = document.getElementsByClassName('which-page-preview');
         const previewFrame = document.getElementById('preview-frame');
+        const openNewTab = document.getElementById('new-tab-opener');
         const previewTxt = document.getElementById('exampleModalFullscreenLabel');
         const previewPath = location.href;
-
         for (let i = 0; i < previewBtn.length; i++) {
-            previewBtn[i].addEventListener('click',(event) => {
+            previewBtn[i].addEventListener('click', (event) => {
                 previewFrame.src = event.target.value;
-                previewTxt.innerText = `Preview of page ${previewPath.slice(0,previewPath.search('22017'))}${event.target.value}`;
+                openNewTab.href = event.target.value;
+                // previewTxt.innerText = `Preview of page ${previewPath.slice(0, previewPath.search('22017'))}${event.target.value}`;
+                previewTxt.innerText = `${event.target.parentElement.parentElement.querySelectorAll('td')[0].innerText.replaceAll('\n\n', ' ')}`;
             });
         }
-
+        // const tableSearch = () =>{
+        // $('#index-table').DataTable({
+            // responsive: true
+        // });
         let table = new DataTable('#index-table');
         let search = document.getElementById("dt-search-0");
         let limit = document.getElementById("dt-length-0");
         search.classList.add('m-2', 'ms-3');
         limit.classList.add('m-2', 'me-3');
-        search.placeholder = "Search Papers";
+        search.placeholder = "Search";
+        // table = table.DataTable({
+        // responsive: true
+        // });
+        
+        // };
+        // tableSearch();
+        // window.addEventListener('orientationchange',tableSearch);
     </script>
 </body>
 
