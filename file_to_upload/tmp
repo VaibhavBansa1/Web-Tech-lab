@@ -1,0 +1,76 @@
+Q1. Write a code for html webpage which displays your name, college name, and semester.  
+Q2. Write a code for html webpage which redirects to Google page. (using < a> tag).  
+Q3. Write a code for html web page which redirects to polygwalior website, Google and some documents using < a> tag.  
+Q4. Write a code for html webpage which displays the image of Virat Kohli. (using < img> tag).  
+Q5. Write a code for html webpage which displays the image of Sachin Tendulkar (using < img> tag). 
+Q6. Write a code for html web page which displays your name in left, college name in right, and semester in center, your branch in red background color and text size - 50px. 
+Q7. Write a code for html webpage which displays your name in < h1> tag and also in blue color and < p> tag uses purple background color. 
+Q8. Write a code for html webpage which displays some text formatting and uses < em>, < i>, < small>, < b>, < strong>, < sup>, < sub>, < ins>, < del> and < mark> tag. 
+Q9. Write a code for html webpage which displays some background color and text of red colour.
+Q10. Write a CSS file and attached to any 3 html webpage. 
+CSS file:- 
+body { background-color: #edf1f5; }  
+	p {font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+    	color: #85757f; text-align :center; font-size:35px; background-color: #C9C9FF; 
+    	margin-right: 15%; margin-left: 15%; } 
+- Page 1st
+- Page 2nd
+- Page 3rd
+Q11. Write a code for html webpage which displays Virat Kohli image as background. 
+Q12. Write a code for html webpage which displays table using < tr> and < td> tag. 
+Q13. Make a form in html web page which takes all the details of person. 
+Q14. Make a form in html web page which takes all the details of person. (Ex - Name, Password, Age, Date of Birth, Month of Admission, Year of 10 Passed, Gender, Qualification, Select Branch, Category (SC/ST/Gen/OBC) using data list, Select Color, Select Range (0 to 100), Submit button).
+Q15. Write a code for html webpage which displays a list. 
+Q16. Use Class, ID selectors to style various elements of HTML Page. Ex: create four < p> and four < h1> element. Center align two < p> and two < h1> using Class.Colour all < p> to blue using class.Last < h1> should colour in yellow using id. 
+Q17. Use Div and span in a page and color two words with same colors. 
+Q18. Write a code for html webpage which displays background. 
+Background Color -   
+Background Image - 
+Background Repeat -  
+Background Attachment - 
+Background Position -
+Q19. Write a code for html webpage which displays all practical on Border , Margin , Padding of elements. 
+Q20. Write a code for html webpage which displays all practical on Text/font formatting, width-Height. 
+Q.1 Write a program to print hello in HTML using body tag? 
+Q.2 Write a program to print information about yourself by using paragraph heading tag? 
+Q.3 Write a program to print a paragraph with comment line in HTML? 
+Q.4 Write a program to make a use of <br> tag in HTML? 
+Q.5 Write a program to insert an image with its height width in HTML? 
+Q.6 Write a program to print welcome to the polytechnic college with different heading tag? 
+Q.7 Write a program to print formula using different formatting tag (<b>,< strong >,< i >,<em>,< mark >,<small >, < sub >,< sup > ? 
+Q.8 Write a program to make hyperlink to the particular text?  
+Q.9 Write a program to change the background of a webpage?  
+Q.10 Write a program to make use of picture tag in HTML?   
+Q.11 Write a program to make an order list in HTML?  
+Q.12 Write a program to make an un-order list in HTML?  
+Q.13 Write a program to make use of a div tag in HTML? 
+Q.14 Write a program to a code for HTML webpage which display table using TR and TD Tag?  
+Q.15 Write a program to make the use of attributes in class in HTML? 
+Q.16 Write a program to make a use of iframe in HTML?  
+Q.17 Write a program to use script to print hello in HTML?  
+Q.18 Write a program to insert a picture by given its part in HTML?
+Q.19 Write a program to use a different HTML Semantics Element? 
+Q.20 Write a program to insert in an emojis?
+Q.21 Write a program to make a use of form tag?
+Q.22 Write a program to make an input tag?
+Q.23 Write a program to make an output tag?
+Q.24 Write a program to make a use of input type tab in HTML?
+Q.25 Write a program to make a SVG in HTML?
+Q.26 Write a program to make the use of selectors element in CSS?
+Q.27 Write a program to make a use of text of element colour property of the text in Style Tag?
+Q.28 Write a program to the background colour in CSS?
+Q.29 Write a program to make the create a border and change in different properties using CSS?
+Q.30 Write a program to demonstrate box model in CSS?
+Q.31 Write a program to make a use of margin in CSS?
+Q.32 Write a program to align image filling include in CSS?
+Q.33 Write a program to set the colour, align list in CSS?
+Part 1st:-
+Part 2nd:-
+Q.34 Write a program to do text decoration in CSS?
+Q.35 Write a program to indentation different spacing b/w text words?
+Q.36 Write a program to transform the text in different CSS?
+Q.37 Write a program to implement text in shadow in CSS?
+Q.38 Write a program to make the different font style in CSS? 
+Q.39 Write a program to make a different icon in a CSS? 
+Q.40 Write a program to make an image gallery in a CSS? 
+Q.41 Write a program to make CSS buttons? 
