@@ -1,6 +1,16 @@
 <?php
 $question_and_file = [
 
+    'My Portfolio' => 'http://vaibhavbansal.rf.gd/Portfolio/',
+
+    'Entering data into a MySQL table using PHP' => 'http://vaibhavbansal.rf.gd/index.php',
+
+    'Make a Calendar using JavaScript' => '22017C04069_64.php',
+    
+    'Copy of google home page' => '22017C04069_63.php',
+
+    'Make a calculator using HTML, CSS and JavaScript' => '22017C04069_62.php',
+
     'Write a code for html webpage which displays your name, college name, and semester.' => '22017C04069_1.php',
 
     'Write a code for html webpage which redirects to Google page.(using < a> tag).' => '22017C04069_2.php',
@@ -135,10 +145,6 @@ $question_and_file = [
     'Write a program to make an image gallery in a CSS?' => '22017C04069_60.php',
 
     'Write a program to make CSS buttons?' => '22017C04069_61.php',
-
-    'Make a calculator using HTML, CSS and JavaScript' => '22017C04069_62.php',
-
-    'Copy of google home page' => '22017C04069_63.php',
 ];
 // print_r($question_and_file);
 ?>
@@ -195,8 +201,10 @@ $question_and_file = [
     </div>
     <div class="container-fluid mt-4">
 
-        <h1 class="pb-1 mb-4 text-black border-bottom border-4 border-secondary">List Of Practical</h1>
+        <h2 class="ps-3 pb-2 mb-4 text-black border-bottom border-4 border-secondary">List Of Practical</h2>
         <div class="table-responsive">
+        <div class="d-flex align-content-stretch flex-wrap">
+        </div>
             <table class="border border-3 border-dark table table-striped-columns table-hover" id="index-table">
 
                 <thead class="table-info">
@@ -231,7 +239,7 @@ $question_and_file = [
                                             <?php echo htmlspecialchars($ques); ?>
                                         </td>
                                         <td>
-                                            <a href="./<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
+                                            <a href="<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
                                                 class="btn btn-outline-dark">
                                                 Open
                                             </a>
@@ -252,7 +260,7 @@ $question_and_file = [
                             foreach ($page as $for_what => $what_page) {
 
                                 $ques_in_part .= "<br>\n<br>" . $for_what;
-                                $link .= "<a href='./$what_page' target='_blank' rel='noopener noreferrer'
+                                $link .= "<a href='$what_page' target='_blank' rel='noopener noreferrer'
                                         class='btn btn-outline-dark mt-3'>
                                         Open
                                     </a>
@@ -283,6 +291,12 @@ $question_and_file = [
                     ?>
                 </tbody>
             </table>
+        </div>
+        <div>
+            <h4 class="ps-2 pb-2 text-black">
+                Vaibhav Bansal 
+                (22017C04069)
+            </h4>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
