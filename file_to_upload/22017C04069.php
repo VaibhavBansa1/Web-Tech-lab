@@ -163,6 +163,7 @@ $question_and_file = [
     <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+
     <style>
         #index-table {
             width: 100%;
@@ -180,6 +181,9 @@ $question_and_file = [
 </head>
 
 <body>
+    
+    <img src="<?php include '22BRACS04.php'; ?>" alt="College image" width="100%" height="100%">
+
     <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel"
         style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
@@ -199,9 +203,11 @@ $question_and_file = [
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-2">
 
-        <h2 class="ps-3 pb-2 mb-4 text-black border-bottom border-4 border-secondary">List Of Practical</h2>
+        <div class="h1 ps-4 pb-2 mb-4 text-black border-bottom border-4 border-secondary" style="color:black">
+            <span class="" id="change-title"></span>
+        </div>
         <div class="table-responsive">
         <div class="d-flex align-content-stretch flex-wrap">
         </div>
@@ -231,27 +237,27 @@ $question_and_file = [
 
                         if (gettype($page) == 'string') {
                             ?>
-                                    <tr>
-                                        <th>
-                                            <?php echo ++$i . "."; ?>
-                                        </th>
-                                        <td>
-                                            <?php echo htmlspecialchars($ques); ?>
-                                        </td>
-                                        <td>
-                                            <a href="<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
-                                                class="btn btn-outline-dark">
-                                                Open
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="which-page-preview btn btn-outline-success"
-                                                value="<?php echo $page; ?>" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModalFullscreen">Preview</button>
-                                        </td>
-                                    </tr>
+                            <tr>
+                                <th>
+                                    <?php echo ++$i . "."; ?>
+                                </th>
+                                <td>
+                                    <?php echo htmlspecialchars($ques); ?>
+                                </td>
+                                <td>
+                                    <a href="<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
+                                        class="btn btn-outline-dark">
+                                        Open
+                                    </a>
+                                </td>
+                                <td>
+                                    <button type="button" class="which-page-preview btn btn-outline-success"
+                                        value="<?php echo $page; ?>" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModalFullscreen">Preview</button>
+                                </td>
+                            </tr>
 
-                                    <?php
+                            <?php
                         } else if (is_array($page)) {
 
                             $link = "";
@@ -269,21 +275,21 @@ $question_and_file = [
                                     <br>";
                             }
                             ?>
-                                            <tr>
-                                                <th>
-                                            <?php echo ++$i . "."; ?>
-                                                </th>
-                                                <td>
-                                            <?php echo $ques_in_part; ?>
-                                                </td>
-                                                <td>
-                                            <?php echo $link; ?>
-                                                </td>
-                                                <td>
-                                            <?php echo $btn; ?>
-                                                </td>
-                                            </tr>
-                                    <?php
+                                <tr>
+                                    <th>
+                                <?php echo ++$i . "."; ?>
+                                    </th>
+                                    <td>
+                                <?php echo $ques_in_part; ?>
+                                    </td>
+                                    <td>
+                                <?php echo $link; ?>
+                                    </td>
+                                    <td>
+                                <?php echo $btn; ?>
+                                    </td>
+                                </tr>
+                            <?php
                         } else {
                             echo "error";
                         }
@@ -292,19 +298,50 @@ $question_and_file = [
                 </tbody>
             </table>
         </div>
-        <div>
+        <!-- <div>
             <h4 class="ps-2 pb-2 text-black">
                 Vaibhav Bansal 
                 (22017C04069)
             </h4>
-        </div>
+        </div> -->
     </div>
+    
+    <script src="https://kit.fontawesome.com/db1dc2c38d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <!-- <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script> -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <!-- Setup and start animation! -->
+    <script>
+        function getGreeting() {
+            const now = new Date();
+            const hour = now.getHours();
+
+            if (hour >= 6 && hour < 12) {
+                return 'Good ^70Mo^50rning!!';
+            } else if (hour >= 12 && hour < 17) {
+                return 'Good ^70After^50noon!!';
+            } else if (hour >= 17 && hour < 22) {
+                return 'Good ^70Eve^50ning!!';
+            } else {
+                return 'Good ^70Ni^50ght!!';
+            }
+        }
+        let typed = new Typed('#change-title', {
+            strings: [getGreeting() , " I'm Vaib^50hav Ban^100sal!", " List Of ^150Practical", ],
+            startDelay: 0,
+            backSpeed: 70,
+            backDelay: 2000,
+            typeSpeed: 60,
+            smartBackspace: true,
+            loop: true,
+            loopCount: Infinity,
+            cursorChar: '_',
+        });
+    </script>
     <script>
         const previewBtn = document.getElementsByClassName('which-page-preview');
         const previewFrame = document.getElementById('preview-frame');
@@ -337,6 +374,7 @@ $question_and_file = [
         // tableSearch();
         // window.addEventListener('orientationchange',tableSearch);
     </script>
+
 </body>
 
 </html>
