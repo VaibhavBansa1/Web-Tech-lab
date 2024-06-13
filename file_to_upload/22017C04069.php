@@ -306,15 +306,11 @@ $question_and_file = [
         </div> -->
     </div>
     
-    <script src="https://kit.fontawesome.com/db1dc2c38d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-    <!-- <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script> -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <!-- Setup and start animation! -->
     <script>
         function getGreeting() {
             const now = new Date();
@@ -342,6 +338,7 @@ $question_and_file = [
             cursorChar: '_',
         });
     </script>
+    
     <script>
         const previewBtn = document.getElementsByClassName('which-page-preview');
         const previewFrame = document.getElementById('preview-frame');
