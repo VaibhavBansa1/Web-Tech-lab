@@ -183,8 +183,9 @@ $question_and_file = [
 
 <body>
 
-    <img src="<?php include '22BRACS04.php'; ?>" alt="College image" width="100%" height="100%">
-
+    <a href="https://www.polygwalior.ac.in/student/22017C04069.php">
+        <img id="college-image" src="<?php include '22BRACS04.php'; ?>" alt="College image" width="100%" height="100%">
+    </a>
     <!-- <div class="modal show" id="welcome" aria-modal="true" role="dialog" style="display: block;">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -199,8 +200,6 @@ $question_and_file = [
         </div>
     </div> -->
 
-
-    <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
     </button> -->
@@ -209,8 +208,8 @@ $question_and_file = [
     <div class="modal fade" id="ask-name" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
         aria-labelledby="exampleModalLabel">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
+            <div class="modal-content text-black">
+                <div class="modal-header bg-info-subtle">
                     <h1 class="modal-title" id="exampleModalLabel">Welcome!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-cross"></button>
                 </div>
@@ -224,15 +223,13 @@ $question_and_file = [
                         Name will be stored in local session storage not in database
                     </p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-btn">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="save-name">Save</button>
+                <div class="modal-footer bg-warning-subtle">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" id="close-btn">Close</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" id="save-name">Save</button>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel"
         style="display: none;" aria-hidden="true">
@@ -280,34 +277,31 @@ $question_and_file = [
 
                 </thead>
                 <tbody class="table-striped-columns">
-
                     <?php
                     $i = 0;
                     foreach ($question_and_file as $ques => $page) {
-
                         if (gettype($page) == 'string') {
-                            ?>
-                            <tr>
-                                <th>
-                                    <?php echo ++$i . "."; ?>
-                                </th>
-                                <td>
-                                    <?php echo htmlspecialchars($ques); ?>
-                                </td>
-                                <td>
-                                    <a href="<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
-                                        class="btn btn-outline-dark">
-                                        Open
-                                    </a>
-                                </td>
-                                <td>
-                                    <button type="button" class="which-page-preview btn btn-outline-success"
-                                        value="<?php echo $page; ?>" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModalFullscreen">Preview</button>
-                                </td>
-                            </tr>
-
-                            <?php
+                    ?>
+                    <tr>
+                        <th>
+                            <?php echo ++$i . "."; ?>
+                        </th>
+                        <td>
+                            <?php echo htmlspecialchars($ques); ?>
+                        </td>
+                        <td>
+                            <a href="<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-outline-dark">
+                                Open
+                            </a>
+                        </td>
+                        <td>
+                            <button type="button" class="which-page-preview btn btn-outline-success"
+                                value="<?php echo $page; ?>" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalFullscreen">Preview</button>
+                        </td>
+                    </tr>
+                    <?php
                         } else if (is_array($page)) {
 
                             $link = "";
@@ -324,22 +318,22 @@ $question_and_file = [
                                 $btn .= "<button type='button' class='which-page-preview btn btn-outline-success mt-3' value='$what_page' data-bs-toggle='modal' data-bs-target='#exampleModalFullscreen'>Preview</button>
                                     <br>";
                             }
-                            ?>
-                                <tr>
-                                    <th>
-                                    <?php echo ++$i . "."; ?>
-                                    </th>
-                                    <td>
-                                    <?php echo $ques_in_part; ?>
-                                    </td>
-                                    <td>
-                                    <?php echo $link; ?>
-                                    </td>
-                                    <td>
-                                    <?php echo $btn; ?>
-                                    </td>
-                                </tr>
-                            <?php
+                    ?>
+                    <tr>
+                        <th>
+                            <?php echo ++$i . "."; ?>
+                        </th>
+                        <td>
+                            <?php echo $ques_in_part; ?>
+                        </td>
+                        <td>
+                            <?php echo $link; ?>
+                        </td>
+                        <td>
+                            <?php echo $btn; ?>
+                        </td>
+                    </tr>
+                    <?php
                         } else {
                             echo "error";
                         }
