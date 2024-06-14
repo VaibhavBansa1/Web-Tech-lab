@@ -6,7 +6,7 @@ $question_and_file = [
     'Entering data into a MySQL table using PHP' => 'http://vaibhavbansal.rf.gd/index.php',
 
     'Make a Calendar using JavaScript' => '22017C04069_64.php',
-    
+
     'Copy of google home page' => '22017C04069_63.php',
 
     'Make a calculator using HTML, CSS and JavaScript' => '22017C04069_62.php',
@@ -155,8 +155,10 @@ $question_and_file = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Of Practical</title>
-    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png" type="image/x-icon">
-    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png"
+        type="image/x-icon">
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png"
+        type="image/x-icon">
     <!-- <link rel="apple-touch-icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -176,13 +178,61 @@ $question_and_file = [
                 display: none;
             }
         }
-
     </style>
 </head>
 
 <body>
-    
+
     <img src="<?php include '22BRACS04.php'; ?>" alt="College image" width="100%" height="100%">
+
+    <!-- <div class="modal show" id="welcome" aria-modal="true" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-lg btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="fw-bold text-center display-2 thank">Welcome</h4>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="ask-name" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Welcome!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-cross"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="h4" for="user-name">Enter Your Name: </label>
+                    <input type="text" class="form-control border border-dark" id="user-name" maxlength="50" placeholder='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' required>
+                    <p class="pt-4">
+                        <b>
+                            Note:
+                        </b>
+                        Name will be stored in local session storage not in database
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-btn">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="save-name">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel"
         style="display: none;" aria-hidden="true">
@@ -209,8 +259,8 @@ $question_and_file = [
             <span class="" id="change-title"></span>
         </div>
         <div class="table-responsive">
-        <div class="d-flex align-content-stretch flex-wrap">
-        </div>
+            <div class="d-flex align-content-stretch flex-wrap">
+            </div>
             <table class="border border-3 border-dark table table-striped-columns table-hover" id="index-table">
 
                 <thead class="table-info">
@@ -277,16 +327,16 @@ $question_and_file = [
                             ?>
                                 <tr>
                                     <th>
-                                <?php echo ++$i . "."; ?>
+                                    <?php echo ++$i . "."; ?>
                                     </th>
                                     <td>
-                                <?php echo $ques_in_part; ?>
+                                    <?php echo $ques_in_part; ?>
                                     </td>
                                     <td>
-                                <?php echo $link; ?>
+                                    <?php echo $link; ?>
                                     </td>
                                     <td>
-                                <?php echo $btn; ?>
+                                    <?php echo $btn; ?>
                                     </td>
                                 </tr>
                             <?php
@@ -305,40 +355,87 @@ $question_and_file = [
             </h4>
         </div> -->
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
     <script>
-        function getGreeting() {
+        const closeCross = document.getElementById('close-cross')
+        const closeBtn = document.getElementById('close-btn')
+        closeCross.addEventListener('click', e => greetWithName(null) )
+        closeBtn.addEventListener('click', e => greetWithName(null) )
+        const getGreeting = () => {
             const now = new Date();
             const hour = now.getHours();
-
             if (hour >= 6 && hour < 12) {
-                return 'Good ^70Mo^50rning!!';
+                return 'Good ^70Mo^50rning';
             } else if (hour >= 12 && hour < 17) {
-                return 'Good ^70After^50noon!!';
+                return 'Good ^70After^50noon';
             } else if (hour >= 17 && hour < 22) {
-                return 'Good ^70Eve^50ning!!';
+                return 'Good ^70Eve^50ning';
             } else {
-                return 'Good ^70Ni^50ght!!';
+                return 'Good ^70Ni^50ght';
             }
         }
-        let typed = new Typed('#change-title', {
-            strings: [getGreeting() , " I'm Vaib^50hav Ban^100sal!", " List Of ^150Practical", ],
-            startDelay: 0,
-            backSpeed: 70,
-            backDelay: 2000,
-            typeSpeed: 60,
-            smartBackspace: true,
-            loop: true,
-            loopCount: Infinity,
-            cursorChar: '_',
-        });
+        const greetWithName = (name) => {
+            nameWithSpace = name === null ? "" : " " + name ;
+            let typed = new Typed('#change-title', {
+                strings: [`${getGreeting()}${nameWithSpace}!!`, " I'm Vaib^50hav Ban^100sal!", " List Of ^150Practical",],
+                startDelay: 0,
+                backSpeed: 70,
+                backDelay: 2000,
+                typeSpeed: 60,
+                smartBackspace: true,
+                loop: true,
+                loopCount: Infinity,
+                cursorChar: '_',
+            });
+        }
+        const nameNotSaved = (sessionStorage.getItem("name") === null) ? true : false;
+        if (nameNotSaved) {
+            document.addEventListener('DOMContentLoaded', (event) => {
+                var myModal = new bootstrap.Modal(document.getElementById('ask-name'), {
+                    keyboard: false,
+                    backdrop: 'static'
+                });
+                myModal.show();
+            });
+            const saveName = document.getElementById("save-name");
+            saveName.addEventListener("click", e => {
+                let userName = document.getElementById("user-name").value;
+                if (userName != "" && userName != null && userName[0] != " " && userName.at(-1) != " " && !userName.includes("  ")) {
+
+                    let nameArray = userName.split(" ");
+                    nameArray.forEach((word, index, arr) => {
+                        arr[index] = word[0].toUpperCase() + word.slice(1).toLowerCase();
+                    });
+                    const properFormatName = nameArray.join(" ");
+                    sessionStorage.setItem("name", properFormatName);
+                    greetWithName(properFormatName);
+                } else {
+                    swal({
+                        title: "Invalid Whitespace or Null Value",
+                        text: "You have entered invalid whitespace or a null value in the name field.\n\n Please try again by refreshing the page.",
+                        icon: "warning",
+                    });
+
+                    greetWithName(null);
+                }
+            });
+
+        } else {
+            const name = sessionStorage.getItem("name");
+            greetWithName(name);
+        }
+        
     </script>
-    
+
     <script>
         const previewBtn = document.getElementsByClassName('which-page-preview');
         const previewFrame = document.getElementById('preview-frame');
@@ -355,7 +452,7 @@ $question_and_file = [
         }
         // const tableSearch = () =>{
         // $('#index-table').DataTable({
-            // responsive: true
+        // responsive: true
         // });
         let table = new DataTable('#index-table');
         let search = document.getElementById("dt-search-0");
@@ -366,7 +463,7 @@ $question_and_file = [
         // table = table.DataTable({
         // responsive: true
         // });
-        
+
         // };
         // tableSearch();
         // window.addEventListener('orientationchange',tableSearch);
