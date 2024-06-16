@@ -423,7 +423,7 @@ $question_and_file = [
                         arr[index] = word[0].toUpperCase() + word.slice(1).toLowerCase();
                     });
                     const properFormatName = nameArray.join(" ");
-                    // sessionStorage.setItem("name", properFormatName);
+                    sessionStorage.setItem("name", properFormatName);
                     greetWithName(properFormatName);
                 } else {
                     swal({
