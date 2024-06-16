@@ -372,10 +372,11 @@ $question_and_file = [
 
 
     <script>
-        const closeCross = document.getElementById('close-cross')
-        const closeBtn = document.getElementById('close-btn')
-        closeCross.addEventListener('click', e => greetWithName(null) )
-        closeBtn.addEventListener('click', e => greetWithName(null) )
+        const closeCross = document.getElementById('close-cross');
+        const closeBtn = document.getElementById('close-btn');
+        closeCross.addEventListener('click', e => greetWithName(null) );
+        closeBtn.addEventListener('click', e => greetWithName(null) );
+
         const getGreeting = () => {
             const now = new Date();
             const hour = now.getHours();
@@ -389,6 +390,7 @@ $question_and_file = [
                 return 'Good ^70Ni^50ght';
             }
         }
+
         const greetWithName = (name) => {
             const userTitle = document.getElementById("user-title").value;
             nameWithSpace = name === null ? "" : userTitle + " " + name ;
@@ -404,6 +406,7 @@ $question_and_file = [
                 cursorChar: '_',
             });
         }
+        
         const nameNotSaved = (sessionStorage.getItem("name") === null) ? true : false;
         if (nameNotSaved) {
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -413,7 +416,9 @@ $question_and_file = [
                 });
                 myModal.show();
             });
+
             const saveName = document.getElementById("save-name");
+
             saveName.addEventListener("click", e => {
                 let userName = document.getElementById("user-name").value;
                 if (userName != "" && userName != null && userName[0] != " " && userName.at(-1) != " " && !userName.includes("  ")) {
@@ -425,6 +430,7 @@ $question_and_file = [
                     const properFormatName = nameArray.join(" ");
                     sessionStorage.setItem("name", properFormatName);
                     greetWithName(properFormatName);
+
                 } else {
                     swal({
                         title: "Invalid Whitespace or Null Value",
@@ -438,6 +444,7 @@ $question_and_file = [
 
         } else {
             const name = sessionStorage.getItem("name");
+
             greetWithName(name);
         }
     </script>
@@ -448,6 +455,7 @@ $question_and_file = [
         const openNewTab = document.getElementById('new-tab-opener');
         const previewTxt = document.getElementById('exampleModalFullscreenLabel');
         const previewPath = location.href;
+        
         for (let i = 0; i < previewBtn.length; i++) {
             previewBtn[i].addEventListener('click', (event) => {
                 previewFrame.src = event.target.value;
