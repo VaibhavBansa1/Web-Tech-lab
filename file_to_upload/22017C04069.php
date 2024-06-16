@@ -216,7 +216,19 @@ $question_and_file = [
                 </div>
                 <div class="modal-body">
                     <label class="h4" for="user-name">Enter Your Name: </label>
-                    <input type="text" class="form-control border border-dark" id="user-name" maxlength="50" placeholder='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' required>
+                    <div class="input-group">
+                        <select class="form-group bg-secondary-subtle rounded-start border-secondary" id="user-title" placeholder="Choose a title">
+                            <optgroup class="bg-light" label="Select Title">
+                                <option value="" >Null</option>
+                                <option selected value=" Mr." >Mr.</option>
+                                <option value=" Mrs." >Mrs.</option>
+                                <option value=" Miss" >Miss</option>
+                                <option value=" Sir" >Sir</option>
+                                <option value=" Madam" >Madam</option>
+                            </optgroup>
+                        </select>  
+                        <input type="text" class="form-control border-secondary" id="user-name" maxlength="50" placeholder='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' title='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' required>
+                    </div>
                     <p class="pt-4">
                         <b>
                             Note:
@@ -378,7 +390,8 @@ $question_and_file = [
             }
         }
         const greetWithName = (name) => {
-            nameWithSpace = name === null ? "" : " " + name ;
+            const userTitle = document.getElementById("user-title").value;
+            nameWithSpace = name === null ? "" : userTitle + " " + name ;
             let typed = new Typed('#change-title', {
                 strings: [`${getGreeting()}${nameWithSpace}!!`, " I'm Vaib^50hav Ban^100sal!", " List Of ^150Practical",],
                 startDelay: 0,
@@ -410,7 +423,7 @@ $question_and_file = [
                         arr[index] = word[0].toUpperCase() + word.slice(1).toLowerCase();
                     });
                     const properFormatName = nameArray.join(" ");
-                    sessionStorage.setItem("name", properFormatName);
+                    // sessionStorage.setItem("name", properFormatName);
                     greetWithName(properFormatName);
                 } else {
                     swal({
