@@ -166,7 +166,6 @@ $question_and_file = [
     <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
-
     <style>
         #index-table {
             width: 100%;
@@ -178,6 +177,11 @@ $question_and_file = [
             h3.showOnMobile {
                 display: none;
             }
+        }
+        #user-title{
+            width: 5rem;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -218,7 +222,7 @@ $question_and_file = [
                     <label class="h4" for="user-name">Enter Your Name: </label>
                     <div class="input-group">
                         <select class="form-group bg-secondary-subtle rounded-start border-secondary" id="user-title" placeholder="Choose a title">
-                            <optgroup class="bg-light" label="Select Title">
+                            <optgroup class="bg-light" label="Select Your Title">
                                 <option value="" >Null</option>
                                 <option selected value=" Mr." >Mr.</option>
                                 <option value=" Mrs." >Mrs.</option>
