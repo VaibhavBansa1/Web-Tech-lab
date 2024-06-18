@@ -425,6 +425,7 @@ $question_and_file = [
             const nameField = document.getElementById("user-name");
             nameField.addEventListener("keyup", e => {
                 if(e.key == "Enter"){
+                    document.querySelector("#save-name").focus();
                     document.querySelector("#save-name").click();
                 }
             });
