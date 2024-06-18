@@ -1,6 +1,7 @@
 <?php 
 session_start();
-if (isset($_SESSION['name']) && isset($_SESSION['uid']) && ($_SESSION['name'] == "Vaibhav Bansal" || $_SESSION['name'] == "Keshav Rajpoot") ) {
+include "22BRACS04_70.php";
+if (isset($_SESSION[base64_decode("bmFtZQ==")]) and ($_SESSION[ base64_decode("bmFtZQ==")] == base64_decode("VmFpYmhhdiBCYW5zYWw=") || $_SESSION[ base64_decode("bmFtZQ==")] == base64_decode("S2VzaGF2IFJhanBvb3Q=")) ) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -9,7 +10,7 @@ if (isset($_SESSION['name']) && isset($_SESSION['uid']) && ($_SESSION['name'] ==
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <a style="color:aliceblue" href="<?php echo base64_decode("MjEwMTdFMDEwNjlfNjkucGhw"); ?>" target="_blank" rel="noopener noreferrer">asdafadgdfsdfsdfsdfsd</a>
+        <?php echo base64_decode($he); ?>
     </body>
     </html>
     <?php
