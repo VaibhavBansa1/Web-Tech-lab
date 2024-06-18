@@ -422,6 +422,13 @@ $question_and_file = [
             });
 
             const saveName = document.getElementById("save-name");
+            const nameField = document.getElementById("user-name");
+            nameField.addEventListener("keyup", e => {
+                if(e.key == "Enter"){
+                    document.querySelector("#save-name").click();
+                }
+            });
+
 
             saveName.addEventListener("click", e => {
                 let userName = document.getElementById("user-name").value;
