@@ -156,16 +156,19 @@ $question_and_file = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Of Practical</title>
-    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png"
-        type="image/x-icon">
-    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png" type="image/x-icon">
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png" type="image/x-icon">
     <!-- <link rel="apple-touch-icon" href="https://cdn4.iconfinder.com/data/icons/global-logistics-3/512/104-512.png"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet" /> -->
     <style>
         #index-table {
             width: 100%;
@@ -178,7 +181,8 @@ $question_and_file = [
                 display: none;
             }
         }
-        #user-title{
+
+        #user-title {
             width: 5rem;
             text-align: center;
             font-weight: bold;
@@ -188,30 +192,7 @@ $question_and_file = [
 
 <body>
 
-    <a href="https://www.polygwalior.ac.in/student/22017C04069.php">
-        <img id="college-image" src="<?php include '22BRACS04.php'; ?>" alt="College image" width="100%" height="100%">
-    </a>
-    <!-- <div class="modal show" id="welcome" aria-modal="true" role="dialog" style="display: block;">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-lg btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <h4 class="fw-bold text-center display-2 thank">Welcome</h4>
-                </div>
-                <br>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button> -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="ask-name" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-        aria-labelledby="exampleModalLabel">
+    <div class="modal fade" id="ask-name" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-black">
                 <div class="modal-header bg-info-subtle">
@@ -223,14 +204,14 @@ $question_and_file = [
                     <div class="input-group">
                         <select class="form-group bg-secondary-subtle rounded-start border-secondary" id="user-title" placeholder="Choose a title">
                             <optgroup class="bg-light" label="Select Your Title">
-                                <option value="" >Null</option>
-                                <option selected value=" Mr." >Mr.</option>
-                                <option value=" Mrs." >Mrs.</option>
-                                <option value=" Miss" >Miss</option>
-                                <option value=" Sir" >Sir</option>
-                                <option value=" Madam" >Madam</option>
+                                <option value="">Null</option>
+                                <option selected value=" Mr.">Mr.</option>
+                                <option value=" Mrs.">Mrs.</option>
+                                <option value=" Miss">Miss</option>
+                                <option value=" Sir">Sir</option>
+                                <option value=" Madam">Madam</option>
                             </optgroup>
-                        </select>  
+                        </select>
                         <input type="text" class="form-control border-secondary" id="user-name" maxlength="50" placeholder='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' title='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' required>
                     </div>
                     <p class="pt-4">
@@ -248,8 +229,7 @@ $question_and_file = [
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel"
-        style="display: none;" aria-hidden="true">
+    <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header bg-success-subtle">
@@ -257,8 +237,7 @@ $question_and_file = [
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe src="" width="100%" height="100%" frameborder="1" style="border:1px solid black;"
-                        id="preview-frame"></iframe>
+                    <iframe src="" width="100%" height="100%" frameborder="1" style="border:1px solid black;" id="preview-frame"></iframe>
                 </div>
                 <div class="modal-footer bg-success-subtle">
                     <a href="" id="new-tab-opener" target="_blank" class="btn btn-secondary">Open in new tab</a>
@@ -267,108 +246,133 @@ $question_and_file = [
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-2">
 
-        <div class="h1 ps-4 pb-2 mb-4 text-black border-bottom border-4 border-secondary" style="color:black">
-            <span class="" id="change-title"></span>
-        </div>
-        <div class="table-responsive">
-            <div class="d-flex align-content-stretch flex-wrap">
+    <a href="https://www.polygwalior.ac.in/student/22017C04069.php">
+        <img id="college-image" src="<?php include '22BRACS04.php'; ?>" alt="College image" width="100%" height="100%">
+    </a>
+
+    <main>
+
+        <div class="container-fluid mt-2">
+
+            <div class="h1 ps-4 pb-2 mb-4 text-black border-bottom border-4 border-secondary" style="color:black">
+                <span class="" id="change-title"></span>
             </div>
-            <table class="border border-3 border-dark table table-striped-columns table-hover" id="index-table">
+            <div class="table-responsive">
+                <div class="d-flex align-content-stretch flex-wrap">
+                </div>
+                <table class="border border-3 border-dark table table-striped-columns table-hover" id="index-table">
 
-                <thead class="table-info">
-                    <tr>
-                        <th> S.No. </th>
-                        <th> Question </th>
-                        <th colspan="2"> Action </th>
-                    </tr>
-                    <!-- <th> Action </th> -->
-                    <!-- <th></th> -->
-                    <tr style="display: none;">
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
+                    <thead class="table-info">
+                        <tr>
+                            <th> S.No. </th>
+                            <th> Question </th>
+                            <th colspan="2"> Action </th>
+                        </tr>
+                        <!-- <th> Action </th> -->
+                        <!-- <th></th> -->
+                        <tr style="display: none;">
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
 
-                </thead>
-                <tbody class="table-striped-columns">
-                    <?php
-                    $i = 0;
-                    foreach ($question_and_file as $ques => $page) {
-                        if (gettype($page) == 'string') {
-                    ?>
-                    <tr>
-                        <th>
-                            <?php echo ++$i . "."; ?>
-                        </th>
-                        <td>
-                            <?php echo htmlspecialchars($ques); ?>
-                        </td>
-                        <td>
-                            <a href="<?php echo $page; ?>" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-dark">
-                                Open
-                            </a>
-                        </td>
-                        <td>
-                            <button type="button" class="which-page-preview btn btn-outline-success"
-                                value="<?php echo $page; ?>" data-bs-toggle="modal"
-                                data-bs-target="#exampleModalFullscreen">Preview</button>
-                        </td>
-                    </tr>
-                    <?php
-                        } else if (is_array($page)) {
+                    </thead>
+                    <tbody class="table-striped-columns">
+                        <?php
+                        $i = 0;
+                        foreach ($question_and_file as $ques => $page) {
+                            if (gettype($page) == 'string') {
+                        ?>
+                                <tr>
+                                    <th>
+                                        <?php echo ++$i . "."; ?>
+                                    </th>
+                                    <td>
+                                        <?php echo htmlspecialchars($ques); ?>
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo $page; ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+                                            Open
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="which-page-preview btn btn-outline-success" value="<?php echo $page; ?>" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Preview</button>
+                                    </td>
+                                </tr>
+                            <?php
+                            } else if (is_array($page)) {
 
-                            $link = "";
-                            $btn = "";
-                            $ques_in_part = htmlspecialchars($ques);
-                            foreach ($page as $for_what => $what_page) {
+                                $link = "";
+                                $btn = "";
+                                $ques_in_part = htmlspecialchars($ques);
+                                foreach ($page as $for_what => $what_page) {
 
-                                $ques_in_part .= "<br>\n<br>" . $for_what;
-                                $link .= "<a href='$what_page' target='_blank' rel='noopener noreferrer'
-                                        class='btn btn-outline-dark mt-3'>
-                                        Open
-                                    </a>
-                                    <br>";
-                                $btn .= "<button type='button' class='which-page-preview btn btn-outline-success mt-3' value='$what_page' data-bs-toggle='modal' data-bs-target='#exampleModalFullscreen'>Preview</button>
-                                    <br>";
+                                    $ques_in_part .= "<br>\n<br>" . $for_what;
+                                    $link .= "<a href='$what_page' target='_blank' rel='noopener noreferrer'
+                                            class='btn btn-outline-dark mt-3'>
+                                            Open
+                                        </a>
+                                        <br>";
+                                    $btn .= "<button type='button' class='which-page-preview btn btn-outline-success mt-3' value='$what_page' data-bs-toggle='modal' data-bs-target='#exampleModalFullscreen'>Preview</button>
+                                        <br>";
+                                }
+                            ?>
+                                <tr>
+                                    <th>
+                                        <?php echo ++$i . "."; ?>
+                                    </th>
+                                    <td>
+                                        <?php echo $ques_in_part; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $link; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $btn; ?>
+                                    </td>
+                                </tr>
+                        <?php
+                            } else {
+                                echo "error";
                             }
-                    ?>
-                    <tr>
-                        <th>
-                            <?php echo ++$i . "."; ?>
-                        </th>
-                        <td>
-                            <?php echo $ques_in_part; ?>
-                        </td>
-                        <td>
-                            <?php echo $link; ?>
-                        </td>
-                        <td>
-                            <?php echo $btn; ?>
-                        </td>
-                    </tr>
-                    <?php
-                        } else {
-                            echo "error";
                         }
-                    }
-                    ?>
-                </tbody>
-            </table>
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div>
+                <h4 class="ps-2 pb-2 text-black">
+                    Vaibhav Bansal 
+                    (22017C04069)
+                </h4>
+            </div> -->
         </div>
-        <!-- <div>
-            <h4 class="ps-2 pb-2 text-black">
-                Vaibhav Bansal 
-                (22017C04069)
-            </h4>
-        </div> -->
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    </main>
+    
+    <footer class="text-center bg-warning-subtle mt-4">
+        <div class="container pt-4">
+            <section class="mb-4">
+                
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://twitter.com/vaibhav69351001" role="button" data-mdb-ripple-color="dark"><i class="fab fa-x-twitter"></i></a>
+                
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.instagram.com/giga_vaibhav/" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+                
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.linkedin.com/in/vaibhav-bansal-327023230/" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://github.com/VaibhavBansa1/" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="mailto:vaibhavbansalgwl@gmail.com" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+            </section>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <a class="text-body" href="polygwalior.ac.in">Dr. B.R. Ambedkar Polytechnic, College</a> 
+            ©: 2024
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -378,8 +382,8 @@ $question_and_file = [
     <script>
         const closeCross = document.getElementById('close-cross');
         const closeBtn = document.getElementById('close-btn');
-        closeCross.addEventListener('click', e => greetWithName(null) );
-        closeBtn.addEventListener('click', e => greetWithName(null) );
+        closeCross.addEventListener('click', e => greetWithName(null));
+        closeBtn.addEventListener('click', e => greetWithName(null));
 
         const getGreeting = () => {
             const now = new Date();
@@ -397,9 +401,9 @@ $question_and_file = [
 
         const greetWithName = (name) => {
             const userTitle = document.getElementById("user-title").value;
-            nameWithSpace = name === null ? "" : userTitle + " " + name ;
+            nameWithSpace = name === null ? "" : userTitle + " " + name;
             let typed = new Typed('#change-title', {
-                strings: [`${getGreeting()}${nameWithSpace}!!`, " I'm Vaib^50hav Ban^100sal!", " List Of ^150Practical",],
+                strings: [`${getGreeting()}${nameWithSpace}!!`, " I'm Vaib^50hav Ban^100sal!", " 4<sup>th</sup> Sem ^150Practical List", ],
                 startDelay: 0,
                 backSpeed: 70,
                 backDelay: 2000,
@@ -410,7 +414,7 @@ $question_and_file = [
                 cursorChar: '_',
             });
         }
-        
+
         const nameNotSaved = (sessionStorage.getItem("name") === null) ? true : false;
         if (nameNotSaved) {
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -424,7 +428,7 @@ $question_and_file = [
             const saveName = document.getElementById("save-name");
             const nameField = document.getElementById("user-name");
             nameField.addEventListener("keyup", e => {
-                if(e.key == "Enter"){
+                if (e.key == "Enter") {
                     document.querySelector("#save-name").focus();
                     document.querySelector("#save-name").click();
                 }
@@ -467,7 +471,7 @@ $question_and_file = [
         const openNewTab = document.getElementById('new-tab-opener');
         const previewTxt = document.getElementById('exampleModalFullscreenLabel');
         const previewPath = location.href;
-        
+
         for (let i = 0; i < previewBtn.length; i++) {
             previewBtn[i].addEventListener('click', (event) => {
                 previewFrame.src = event.target.value;
