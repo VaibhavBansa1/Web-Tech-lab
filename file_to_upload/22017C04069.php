@@ -400,8 +400,8 @@ $question_and_file = [
         }
 
         const greetWithName = (name) => {
-            const userTitle = document.getElementById("user-title").value;
-            nameWithSpace = name === null ? "" : userTitle + " " + name;
+            userTitle = sessionStorage.getItem("name");
+            nameWithSpace = name === null ? "" : userTitle;
             let typed = new Typed('#change-title', {
                 strings: [`${getGreeting()}${nameWithSpace}!!`, " I'm Vaib^50hav Ban^100sal!", " 4<sup>th</sup> Sem ^150Practical List", ],
                 startDelay: 0,
@@ -444,7 +444,8 @@ $question_and_file = [
                         arr[index] = word[0].toUpperCase() + word.slice(1).toLowerCase();
                     });
                     const properFormatName = nameArray.join(" ");
-                    sessionStorage.setItem("name", properFormatName);
+                    const userTitle = document.getElementById("user-title").value;
+                    sessionStorage.setItem("name", userTitle + " " + properFormatName);
                     greetWithName(properFormatName);
 
                 } else {
