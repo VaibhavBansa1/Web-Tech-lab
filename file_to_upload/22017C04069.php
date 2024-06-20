@@ -354,16 +354,30 @@ $question_and_file = [
     <footer class="text-center bg-warning-subtle mt-4">
         <div class="container pt-4">
             <section class="mb-4">
-                
-                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://twitter.com/vaibhav69351001" role="button" data-mdb-ripple-color="dark"><i class="fab fa-x-twitter"></i></a>
-                
-                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.instagram.com/giga_vaibhav/" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
-                
-                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.linkedin.com/in/vaibhav-bansal-327023230/" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
 
-                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://github.com/VaibhavBansa1/" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
-                
-                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="mailto:vaibhavbansalgwl@gmail.com" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://twitter.com/vaibhav69351001/" role="button" data-mdb-ripple-color="dark" data-bs-toggle="tooltip" data-bs-title="Follow me on Twitter!">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.instagram.com/giga_vaibhav/" role="button" data-mdb-ripple-color="dark" data-bs-toggle="tooltip" data-bs-title="Follow me on Instagram!">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.linkedin.com/in/vaibhav-bansal-327023230/" role="button" data-mdb-ripple-color="dark" data-bs-toggle="tooltip" data-bs-title="Follow me on Linkedin!">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://github.com/VaibhavBansa1/" role="button" data-mdb-ripple-color="dark" data-bs-toggle="tooltip" data-bs-title="Follow me on Github!">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="mailto:vaibhavbansalgwl@gmail.com" role="button" data-mdb-ripple-color="dark" data-bs-toggle="tooltip" data-bs-title="My Gmail Address!">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://vaibhavbansal.rf.gd/Portfolio/" role="button" data-mdb-ripple-color="dark" data-bs-toggle="tooltip" data-bs-title="My Portfolio">
+                    <i class="fa-solid fa-user-tie"></i>
+                </a>
             </section>
         </div>
 
@@ -498,6 +512,8 @@ $question_and_file = [
         // };
         // tableSearch();
         // window.addEventListener('orientationchange',tableSearch);
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 
 </body>
