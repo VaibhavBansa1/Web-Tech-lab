@@ -212,7 +212,7 @@ $question_and_file = [
                                 <option value=" Madam">Madam</option>
                             </optgroup>
                         </select>
-                        <input type="text" class="form-control border-secondary" id="user-name" maxlength="50" placeholder='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' title='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' required>
+                        <input type="text" class="form-control border-secondary" id="user-name" maxlength="50" placeholder='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' title='e.g., "Vaibhav Bansal" (Whitespace should be proper.)' required autofocus>
                     </div>
                     <p class="pt-4">
                         <b>
@@ -514,7 +514,12 @@ $question_and_file = [
         // window.addEventListener('orientationchange',tableSearch);
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
+        </script>
+        <script>
+            setTimeout(() => {
+                document.querySelector("#user-name").focus();
+            },1000);
+        </script>
 
 </body>
 
