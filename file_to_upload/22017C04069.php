@@ -206,6 +206,7 @@ $question_and_file = [
                             <optgroup class="bg-light" label="Select Your Title">
                                 <option value="">Null</option>
                                 <option selected value=" Mr.">Mr.</option>
+                                <option value=" Dr.">Dr.</option>
                                 <option value=" Mrs.">Mrs.</option>
                                 <option value=" Miss">Miss</option>
                                 <option value=" Sir">Sir</option>
@@ -256,6 +257,7 @@ $question_and_file = [
         <div class="container-fluid mt-2">
 
             <div class="h1 ps-4 pb-2 mb-4 text-black border-bottom border-4 border-secondary" style="color:black">
+                <span class="" id="title-placeholder">4<sup>th</sup> Sem Practical List</span>
                 <span class="" id="change-title"></span>
             </div>
             <div class="table-responsive">
@@ -414,6 +416,7 @@ $question_and_file = [
         }
 
         const greetWithName = (name) => {
+            document.getElementById("title-placeholder").style.display = "none";
             userTitle = sessionStorage.getItem("name");
             nameWithSpace = name === null ? "" : userTitle;
             let typed = new Typed('#change-title', {
@@ -518,7 +521,7 @@ $question_and_file = [
         <script>
             setTimeout(() => {
                 document.querySelector("#user-name").focus();
-            },1000);
+            },700);
         </script>
 
 </body>
