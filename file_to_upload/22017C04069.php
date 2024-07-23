@@ -403,7 +403,7 @@ $question_and_file = [
             const hours = now.getHours();
             const minutes = now.getMinutes();
             const seconds = now.getSeconds();
-            const formattedTime = `${hours}:${minutes}:${seconds}`;
+            const formattedTime = `${hours} : ${minutes} : ${seconds}`;
             document.head.querySelectorAll("title")[0].innerText = `${headTitle} - ${formattedTime}`;
         },500);
 
